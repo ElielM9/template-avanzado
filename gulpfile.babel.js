@@ -111,7 +111,7 @@ function javaScript(done) {
 }
 
 function dev(done) {
-  watch(`src/views/**/*.html`);
+  watch(`src/views/**/*.html`, html);
   watch(`src/scss/**/*.scss`, css);
   watch(`src/js/**/*.js`, javaScript);
 
@@ -124,4 +124,4 @@ exports.js = javaScript;
 exports.img = img;
 exports.vWebp = vWebp;
 exports.vAvif = vAvif;
-exports.dev = parallel(html, img, vWebp, vAvif, javaScript, dev);
+exports.dev = parallel(img, vWebp, vAvif, dev);
