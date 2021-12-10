@@ -1,0 +1,30 @@
+@use "config/mediaqueries" as mq;
+
+@mixin phone {
+  @media (min-width: mq.$tel) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: mq.$tablet) {
+    @content;
+  }
+}
+@mixin escritorio {
+  @media (min-width: mq.$escritorio) {
+    @content;
+  }
+}
+
+@mixin escritorioXL {
+  @media (min-width: mq.$escritorioXL) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
